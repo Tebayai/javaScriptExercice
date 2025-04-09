@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La météo de gulli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="containerWeather">
+        <div class="weather">
+            <h1 class="title">Il fait bo ?</h1>
+            <form class="inputWeather">
+                <input type="text" class="input" id="input" placeholder="Entrez une ville">
+                <button class="btn" id="btn">Afficher la météo</button>
+            </form>
+            <div class="afficherWeather hidden">
+                <h2 class="city"></h2>
+                <p class="temp"></p>
+                <img class="icons" alt="weather img">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+
+
+</html>

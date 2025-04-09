@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 3rem;
+    color:blue;
+}
+
+.containerCarousel{
+    position: relative;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.carousel{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height:500px;
+    display: flex;
+}
+
+.carousel img{
+    width: 100%;
+    height:100%;
+    border-radius: 20px;
+    position:absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.carousel img.active{
+    opacity: 1;
+    display:block;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius : 10px;
+}
+
+#prev{
+    position: relative;
+    right:10%;
+}
+
+#next{
+    position: relative;
+    left:10%;
+}
+
+.indicators{
+    display:flex;
+    justify-content:center;
+    margin-top:2rem;
+}
+
+.indicator{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active{
+    background-color: red;
+}
+
+/*Modale */
+
+.modal{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+
+}
+
+.modal-content{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+.modal .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:90vh
+}
+
+.modal.active{
+    display:flex;
+}
+
+body.modal-open{
+    overflow: hidden;
+}
