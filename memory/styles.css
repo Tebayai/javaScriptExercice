@@ -1,0 +1,153 @@
+:root {
+    --color-bg: #f9f7f6;
+    --color-card-back: #d1d1d1;
+    --color-primary: #df5f54;
+    --color-secondary: #5c8de7;
+    --color-accent: #00b894;
+    --color-pink: #ee8b8b;
+    --color-purple: #3d338a;
+    --color-border: #2d3436;
+    --color-valid: #55efc4;
+    --color-text: #2d3436;
+  
+    --font-title: 'Luckiest Guy', sans-serif;
+    --card-size: 5rem;
+    --border-radius: 12px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font-title);
+    color: var(--color-text);
+  }
+
+.content .title{
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    width: 50%;
+    background: white;
+    border: 8px solid var(--color-border);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+  }
+
+.card-container .card-back{
+    background-image: url('img/back.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-container .card .reveal{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.card-container .card{
+    width: var(--card-size);
+    height: var(--card-size);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:not(.flipped):hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+}
+
+.card.flipped{
+    transform: rotate(75deg);
+}
+
+.card-container .card .reveal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+  
+  .reveal.valid {
+    display: none;
+    border: 4px solid var(--color-valid);
+}
+
+  .card-container .card .red { background-color: var(--color-primary); }
+  .card-container .card .blue { background-color: var(--color-secondary); }
+  .card-container .card .green { background-color: var(--color-accent); }
+  .card-container .card .orange { background-color: orange; }
+  .card-container .card .pink { background-color: var(--color-pink); }
+  .card-container .card .purple { background-color: var(--color-purple); }
+
+/* affichage des scores */
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 2rem;
+    gap: 8rem;
+}
+
+.scoreboard .score.active {
+    color: var(--color-accent);
+}
+
+
+/* condition de victoire */
+
+.victory{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    background-color: white;
+    padding: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    z-index: 11;
+}
+
+.victory .restart-button {
+    padding: 1rem 3rem;
+    border-radius: var(--border-radius);
+    background-color: beige;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.3); /* un peu d’assombrissement */
+    z-index: 10;
+    display: none;
+}
+

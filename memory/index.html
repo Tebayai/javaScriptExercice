@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Memory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="content">
+        <h1 class="title">Memory Games</h1>
+        <div class="card-container">
+            <div class="card card-back" data-card="1">
+                <div class="reveal green"></div>
+            </div>
+            <div class="card card-back" data-card="1">
+                <div class="reveal green"></div>
+            </div>
+            <div class="card card-back" data-card="2">
+                <div class="reveal red"></div>
+            </div>
+            <div class="card card-back" data-card="2">
+                <div class="reveal red"></div>
+            </div>
+            <div class="card card-back" data-card="3">
+                <div class="reveal blue"></div>
+            </div>
+            <div class="card card-back" data-card="3">
+                <div class="reveal blue"></div>
+            </div>
+            <div class="card card-back" data-card="4">
+                <div class="reveal orange"></div>
+            </div>
+            <div class="card card-back" data-card="4">
+                <div class="reveal orange"></div>
+            </div>
+            <div class="card card-back" data-card="5">
+                <div class="reveal pink"></div>
+            </div>
+            <div class="card card-back" data-card="5">
+                <div class="reveal pink"></div>
+            </div>
+            <div class="card card-back" data-card="6">
+                <div class="reveal purple"></div>
+            </div>
+            <div class="card card-back" data-card="6">
+                <div class="reveal purple"></div>
+            </div>
+            
+        </div>
+
+        <div class="scoreboard">
+            <div id="player1" class="score active">Player 1 : <span id="score1">0</span></div>
+            <div id="player2" class="score">Player 2 : <span id="score2">0</span></div>
+        </div>
+
+        <div class="overlay"></div>
+        <div class="victory">
+            <h2 class="victory-text"></h2>
+            <button class="restart-button">Play Again</button>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
